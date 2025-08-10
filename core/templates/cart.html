@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Cart | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/cart.css' %}">
+{% endblock %}
+
+{% block content %}
+ <div class="cart-page-container">
+        <header class="cart-header">
+            <span class="breadcrumb">Home > Add to Cart</span>
+        </header>
+        <div class="cart-content-wrapper">
+            <div id="cart-item-list">
+                <!-- Cart items will be dynamically added here -->
+            </div>
+            <div id="cart-summary">
+                <!-- Cart summary will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+    
+    
+        
+    <script src="{% static 'js/cart.js' %}"></script>
+{% endblock %}

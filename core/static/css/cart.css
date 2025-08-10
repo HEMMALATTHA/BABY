@@ -1,0 +1,158 @@
+
+.cart-page-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.cart-header {
+    margin-bottom: 30px;
+}
+
+.breadcrumb {
+    font-size: 1em;
+    color: #555;
+}
+
+.cart-content-wrapper {
+    display: flex;
+    gap: 30px;
+}
+
+#cart-item-list {
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#cart-summary {
+    flex: 1;
+}
+
+.cart-table-header, .cart-item-row {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 0.1fr;
+    gap: 10px;
+    align-items: center;
+    padding: 15px;
+    background-color: #f0f8ff; /* Light blue background for cart elements */
+    border: 1px solid #c8e6f0;
+    border-radius: 8px;
+    font-size: 1em;
+}
+
+.cart-table-header {
+    font-weight: bold;
+    color: #333;
+    background-color: #c8e6f0;
+}
+
+.product-info-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.product-image {
+    width: 60px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.quantity-cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    max-width: 100px;
+}
+
+.quantity-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    color: #555;
+}
+
+.quantity-value {
+    min-width: 20px;
+    text-align: center;
+}
+
+.remove-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #a54b4b;
+    font-weight: bold;
+}
+
+.cart-total-box {
+    background-color: #f0f8ff;
+    border: 1px solid #c8e6f0;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.cart-total-title {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0 0 10px 0;
+}
+
+.summary-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.summary-line.total-line {
+    font-size: 1.2em;
+    font-weight: bold;
+    border-bottom: none;
+    padding-top: 15px;
+}
+
+.checkout-button {
+    background-color: #00bfff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+}
+
+.checkout-button:hover {
+    background-color: #0099cc;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .cart-content-wrapper {
+        flex-direction: column;
+    }
+    .cart-table-header, .cart-item-row {
+        grid-template-columns: 1fr;
+    }
+    .cart-table-header > *, .cart-item-row > * {
+        text-align: center;
+    }
+    .product-info-cell {
+        flex-direction: column;
+    }
+}

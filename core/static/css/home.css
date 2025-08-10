@@ -1,0 +1,891 @@
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+     font-family: 'Poppins', sans-serif;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Hero Section */
+.home-hero {
+    position: relative;
+    width: 100%;
+    min-height: 600px;
+    background-image: url('../images/babyhome.PNG');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .home-hero {
+        min-height: 500px;
+    }
+}
+
+@media (max-width: 768px) {
+    .home-hero {
+        min-height: 400px;
+        background-position: top;
+    }
+}
+
+/* Featured Categories Section */
+.featured-categories-section {
+    padding: 20px;
+    background-color: #ffffff;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.featured-categories-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.featured-categories-heading {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.featured-categories-subtitle {
+    font-size: 1.2em;
+    color: #666666;
+    font-weight: 400;
+}
+
+.category-cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.category-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.category-card {
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    transition: transform 0.3s ease-in-out;
+    height:350px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+}
+
+.card-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+    background-color: #f0f8ff; /* Placeholder background color */
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Changed to 'contain' to ensure entire image is visible without cropping */
+    display: block;
+    margin: auto;
+    padding: 10px;
+}
+
+.card-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    background-color: #b0e4f4;
+}
+
+.category-card-title {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333333;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    stroke: #00bfff;
+    transition: stroke 0.3s ease-in-out;
+}
+
+.category-card:hover .arrow-icon {
+    stroke: #0099cc;
+}
+
+.card-label {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #8c8c8c;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+    font-size: 0.8em;
+    font-weight: bold;
+    line-height: 1.2;
+    max-width: 100px;
+}
+
+/* Media queries for the new section */
+@media (max-width: 992px) {
+    .category-cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .category-cards-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- New Section: Why Parents Trust Us --- */
+
+.why-trust-us-section {
+    padding: 50px 20px;
+    background-color: #f8f9fa;
+    text-align: center;
+}
+
+.why-trust-us-header {
+    margin-bottom: 50px;
+}
+
+.why-trust-us-heading {
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.why-trust-us-subtitle {
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+.trust-cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.trust-card {
+    background-color: transparent; /* No background here, child elements will have their own */
+    border: 1px solid #00acc1;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; /* Stretch children to fill width */
+    height:420px;
+}
+
+.trust-card:hover {
+    transform: translateY(-5px);
+}
+
+.trust-icon {
+    background-color: #ffffff; /* White background for the icon section */
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.trust-icon img {
+    width: 100px;
+    height: 100px;
+}
+
+.trust-card-content {
+    background-color: #b0e4f4; /* Light blue background for the text section */
+    padding: 30px;
+    text-align: center;
+    border:1px solid #b0e4f4;
+    border-radius: 15px;
+    margin:10px;
+
+}
+
+.trust-card-title {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.trust-card-text {
+    font-size: 0.8em;
+    color: #555;
+    line-height: 1.5;
+}
+/* --- New Section: Best Sellers --- */
+.best-sellers-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.best-sellers-header {
+    margin-bottom: 50px;
+}
+
+.best-sellers-heading {
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.best-sellers-subtitle {
+    font-size: 1.2em;
+    color: #6c757d;
+}
+
+.best-sellers-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.product-card {
+    background-color: transparent;
+    border: 1px solid #b0e4f4;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card-image-container {
+    position: relative;
+    background-color: #ffffff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product-card-image {
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.product-new-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background-color: #00b4d8;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+}
+
+.product-card-details {
+    background-color: #e0f7fa;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.product-card-title {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.star-rating {
+    margin-bottom: 10px;
+    color: gold; /* Placeholder for star icons */
+}
+
+.pricing-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    flex-wrap: wrap;
+}
+
+.mrp {
+    font-size: 0.9em;
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.price {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #00796b;
+}
+
+.buy-button {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    align-self: flex-end;
+}
+
+.buy-button:hover {
+    background-color: #00838f;
+}
+/* --- New Section: Trending Products - Stroller Feature --- */
+.trending-products-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.trending-products-header {
+    margin-bottom: 50px;
+}
+
+.trending-products-heading {
+    font-size: 3.2em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.trending-products-subtitle {
+    font-size: 1.4em;
+    color: black;
+}
+
+.stroller-feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 30px;
+}
+
+.stroller-image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.stroller-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.stroller-text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.stroller-title {
+    font-size: 2.7em;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+    margin-top: -200px;
+}
+
+.stroller-description {
+    font-size: 1.5em;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.buy-now-button {
+    display: inline-flex;
+    align-items: center;
+    background-color: #b0e4f4;
+    color: black;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.buy-now-button:hover {
+    background-color: #00838f;
+}
+
+.arrow-right-icon {
+    margin-left: 10px;
+    stroke: black;
+}
+
+/* Responsive adjustments for the new section */
+@media (max-width: 992px) {
+    .stroller-feature-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .stroller-image-container,
+    .stroller-text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buy-now-button {
+        align-self: center;
+    }
+}
+
+/* --- New Section: Trending Products - Feeding Bottle Feature --- */
+.feeding-bottle-feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: 40px; /* Add some space above the feeding bottle section */
+}
+
+.feeding-bottle-image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.feeding-bottle-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.feeding-bottle-text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+}
+
+.feeding-bottle-title {
+    font-size: 2.7em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: -200px;
+}
+
+.feeding-bottle-description {
+    font-size: 1.4em;
+    color: black;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* Responsive adjustments for the new section */
+@media (max-width: 992px) {
+    .stroller-feature-container,
+    .feeding-bottle-feature-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .stroller-image-container,
+    .stroller-text-container,
+    .feeding-bottle-image-container,
+    .feeding-bottle-text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buy-now-button {
+        align-self: center;
+    }
+}
+/* --- New Section: Trending Products - Pampers Feature --- */
+.pampers-feature-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-radius: 15px;
+    padding: 30px;
+    margin-top: -40px; /* Add some space above the feeding bottle section */
+}
+
+.pampers-image-container {
+    flex: 1;
+    max-width: 50%;
+}
+
+.pampers-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+}
+
+.pampers-text-container {
+    flex: 1;
+    max-width: 50%;
+    text-align: left;
+    margin-top: -250px;
+}
+
+.pampers-title {
+    font-size: 2.7em;
+    font-weight: 700;
+    color: black;
+    margin-bottom: 10px;
+}
+
+.pampers-description {
+    font-size: 1.4em;
+    color: black;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+
+/* Responsive adjustments for the new section */
+@media (max-width: 992px) {
+    .stroller-feature-container,
+    .feeding-bottle-feature-container,
+    .pampers-feature-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .stroller-image-container,
+    .stroller-text-container,
+    .feeding-bottle-image-container,
+    .feeding-bottle-text-container,
+    .pampers-image-container,
+    .pampers-text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buy-now-button {
+        align-self: center;
+    }
+}
+
+.testimonials-section {
+    padding: 50px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.testimonials-header {
+    margin-bottom: 50px;
+}
+
+.testimonials-heading {
+    font-size: 3em;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.testimonials-subtitle {
+    font-size: 1.2em;
+    color: #6c757d;
+    text-align: center;
+}
+
+.testimonials-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.testimonial-card {
+    position: relative;
+    background-color: #f8f9fa;
+    border: 2px solid #b0e4f4;
+    border-radius: 80px 80px 30px 30px; /* This gives the cloud-like shape */
+    padding: 40px 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    max-width: 350px;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.testimonial-header {
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.testimonial-header img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.star-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.testimonial-content {
+    margin-top: 40px;
+}
+
+.testimonial-card h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.testimonial-card p {
+    font-size: 1em;
+    color: #555;
+    line-height: 1.6;
+    font-style: italic;
+}
+
+.nav-arrow {
+    background-color: #00acc1;
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.nav-arrow:hover {
+    background-color: #00838f;
+}
+
+.nav-arrow svg {
+    width: 24px;
+    height: 24px;
+    stroke: currentColor;
+    stroke-width: 2;
+}
+
+/* Responsive adjustments for the new section */
+@media (max-width: 992px) {
+    .stroller-feature-container,
+    .feeding-bottle-feature-container,
+    .pampers-feature-container {
+        flex-direction: column;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .stroller-image-container,
+    .stroller-text-container,
+    .feeding-bottle-image-container,
+    .feeding-bottle-text-container,
+    .pampers-image-container,
+    .pampers-text-container {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .buy-now-button {
+        align-self: center;
+    }
+
+    .testimonials-container {
+        flex-direction: column;
+        gap: 80px; /* Adjust gap for stacked cards */
+    }
+
+    .nav-arrow {
+        display: none; /* Hide arrows on smaller screens */
+    }
+}
+
+/* --- FAQ Section --- */
+        .faq-section {
+            padding: 5rem 1rem;
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .accordion-item {
+            background-color: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid #00b4d8;
+        }
+
+        .accordion-button {
+            width: 100%;
+            text-align: left;
+            padding: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .accordion-button:hover {
+            background-color: #f0f0f0;
+        }
+
+        .accordion-button svg {
+            width: 24px;
+            height: 24px;
+            color: #00acc1;
+            transition: transform 0.3s ease;
+        }
+
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+        }
+
+        .accordion-content p {
+            opacity: 0;
+            padding-bottom: 1.5rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .accordion-item.active .accordion-content {
+            max-height: 200px; /* This value should be enough for most content */
+            padding-bottom: 1.5rem;
+        }
+
+        .accordion-item.active .accordion-content p {
+            opacity: 1;
+            transition: opacity 0.5s ease 0.2s;
+        }
+
+        .accordion-item.active .accordion-button svg {
+            transform: rotate(45deg);
+        }
+
+        /* --- Media Queries for Responsiveness --- */
+        @media (max-width: 768px) {
+            .home-hero h1 {
+                font-size: 3rem;
+            }
+
+            .home-hero p {
+                font-size: 1.25rem;
+            }
+
+            .trust-cards-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-card {
+                width: 90%;
+            }
+
+            .stroller-feature-container,
+            .feeding-bottle-feature-container,
+            .pampers-feature-container {
+                flex-direction: column;
+            }
+
+            .feeding-bottle-feature-container {
+                flex-direction: column-reverse;
+            }
+
+            .testimonials-container {
+                flex-wrap: wrap;
+            }
+
+            .nav-arrow {
+                display: none; /* Hide arrows on mobile */
+            }
+
+            .testimonial-card {
+                width: 100%;
+            }
+        }
+

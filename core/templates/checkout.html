@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Checkout | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+   <div class="product-wrapper">
+        <div id="checkout-content">
+            <!-- Content will be dynamically added here by JavaScript -->
+            <div class="loading-message">Loading product details...</div>
+        </div>
+    </div>
+    <script src="{% static 'js/checkout.js' %}"></script>
+{% endblock %}

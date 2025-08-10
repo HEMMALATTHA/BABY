@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Payment | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/payment.css' %}">
+{% endblock %}
+
+{% block content %} 
+
+<div class="payment-page-container">
+        <header class="payment-header">
+            <span class="breadcrumb">Home > Add to Cart > Payments</span>
+        </header>
+        <h1 class="payment-title">Details</h1>
+        <div id="payment-content" class="payment-content-wrapper">
+            <p class="loading-message">Loading order details...</p>
+        </div>
+    </div>
+<script src="{% static 'js/payment.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,124 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}EarthBubs{% endblock %}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+      {% block head %}{% endblock %}
+</head>
+<body data-page="{% block page_name %}{% endblock %}">
+
+<!-- Navbar -->
+<header class="eb-navbar">
+    <div class="eb-logo-container">
+        <img src="{% static 'images/logo.png' %}" alt="EarthBubs Logo" class="eb-logo">
+        <span class="eb-logo-text">EarthBubs</span>
+    </div>
+
+    <nav class="eb-nav-links">
+        <a href="{% url 'home' %}" >Home</a>
+
+        <!-- Dropdown Menu -->
+        <div class="eb-dropdown">
+            <button class="eb-dropbtn">Products</button>
+            <div class="eb-dropdown-content">
+                <a href="{% url 'pampers' %}">Pampers</a>
+                <a href="{% url 'boy' %}">Boy's Fashion</a>
+                <a href="{% url 'girls' %}">Girl's Fashion</a>
+                <a href="{% url 'soap' %}">Soap</a>
+                <a href="{% url 'stroller' %}">Stroller</a>
+                <a href="{% url 'bottle' %}">Bottle</a>
+            </div>
+        </div>
+
+        <a href="{% url 'offer' %}">Offers</a>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'contact' %}">Contacts</a>
+    </nav>
+
+    <div class="eb-right-icons">
+        <div class="eb-search-box">
+            <input type="text" placeholder="Search..." class="eb-search-input">
+            <button class="eb-search-btn"><i class="fas fa-search"></i></button>
+        </div>
+
+          <a href="{% url 'cart' %}"><i class="fas fa-shopping-cart eb-icon"></i></a>
+        <i class="fas fa-user eb-icon"></i>
+        
+       
+    </div>
+</header>
+
+<!-- Page Content -->
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+<!-- Footer -->
+<footer class="eb-footer">
+    <div class="eb-footer-container">
+
+        <!-- KNOW -->
+        <div class="eb-footer-column">
+            <h4>KNOW</h4>
+            <ul>
+                <li><a href="{% url 'about' %}">About Us</a></li>
+                <li><a href="{% url 'about' %}">About Earthbubs Store</a></li>
+                <li><a href="#">Bulk Purchase & Corporate Gifts</a></li>
+            </ul>
+        </div>
+
+        <!-- TERMS -->
+        <div class="eb-footer-column">
+            <h4>TERMS & CONDITIONS</h4>
+            <ul>
+                <li><a href="#">Shipping & Return Policies</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">FAQ's</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="eb-footer-column">
+            <h4>CONTACT US</h4>
+            <ul>
+                <li>For Sale: <a href="mailto:earthbubs@co.in">Earthbubs@co.in</a></li>
+                <li>Call: +91 1234567890</li>
+                <li>For Complaints: 1800 202 2222</li>
+                <li>Chat Time: Our Team is Available From Monday to Saturday from 9.00AM to 8.00PM</li>
+                <li>For Complaints: <a href="#">Ebcustomercare.com</a></li>
+            </ul>
+        </div>
+
+        <!-- FOLLOW -->
+        <div class="eb-footer-column">
+            <h4>FOLLOW US</h4>
+            <div class="eb-social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Divider -->
+    <hr class="eb-footer-divider">
+
+    <!-- Bottom copyright -->
+    <p class="eb-footer-bottom">&copy; 2025 EarthBubs. All Rights Reserved.</p>
+</footer>
+
+<!-- Font Awesome for Icons -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+
+<!-- JS -->
+<script src="{% static 'js/base.js' %}"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Bottles| EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/pampers.css' %}">
+{% endblock %}
+
+{% block content %}
+{% block page_name %}bottle{% endblock %}
+
+<div class="breadcrumb">Home > Products > Bottles</div>
+
+<!-- Filter Button -->
+<div class="filter-btn-container">
+    <button id="filterToggle">Filter</button>
+</div>
+
+<!-- Products -->
+<div class="product-container" id="product-container"></div>
+
+<!-- Pagination -->
+<div class="pagination" id="pagination"></div>
+
+<!-- Filter Panel -->
+<div class="filter-box" id="filterPanel">
+    <h3>Filter</h3>
+    <label><input type="checkbox" value="Diaper Pants">Price(100-1000) </label>
+    <label><input type="checkbox" value="Super Cute's"> Price(1000-1500)</label>
+    <label><input type="checkbox" value="Mee Premium"> Price(1500-10000)</label>
+    <label><input type="checkbox" value="Mee Diaper Pants">Free shipping</label>
+    <label><input type="checkbox" value="Diaper Combo"> Discounts</label>
+</div>
+
+<!-- <script>
+    // Filter toggle logic
+    document.addEventListener("DOMContentLoaded", () => {
+        const filterToggle = document.getElementById("filterToggle");
+        const filterPanel = document.getElementById("filterPanel");
+
+        filterToggle.addEventListener("click", () => {
+            filterPanel.classList.toggle("active");
+        });
+
+        // Close when clicking outside
+        document.addEventListener("click", (e) => {
+            if (!filterPanel.contains(e.target) && !filterToggle.contains(e.target)) {
+                filterPanel.classList.remove("active");
+            }
+        });
+    });
+</script> -->
+
+<script src="{% static 'js/pampers.js' %}"></script>
+{% endblock %}

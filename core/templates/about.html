@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/about.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="about-page">
+    <div class="breadcrumb">Home › About</div>
+    <div class="about-content">
+        <div class="about-logo">
+            <img src="{% static 'images/logo.png' %}" alt="EarthBubs Logo">
+        </div>
+        <div class="about-text">
+            <h1>About Us</h1>
+              <p>At EarthBubs, we believe that every baby deserves the safest, softest start in life. That’s why we’re dedicated to offering high quality, trusted baby products that combine comfort, care, and innovation all wrapped in love. Born from a parent's desire for gentle, safe, and natural baby essentials, our journey began with one goal: to make parenting a little easier, and a lot more joyful. From soft diapers and skin-loving care to smart strollers and feeding must-haves, every product we offer is thoughtfully chosen and thoroughly tested for your baby’s well being. We’re more than just a store — we’re part of your parenting journey.</p>
+            <h3>What Makes Us Different:</h3>
+            <ul>
+                <li>🌿 Natural, safe, and toxin–free ingredients</li>
+                <li>🛡 Pediatrician & dermatologist approved</li>
+                <li>👶 Designed with real parents in mind</li>
+                <li>🌍 Eco-conscious and cruelty–free practices</li>
+                <li>❤️ 10,000+ happy families and growing!</li>
+            </ul>
+        </div>
+    </div>
+</section>
+{% endblock %}

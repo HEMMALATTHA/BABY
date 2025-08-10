@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Order Success | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/ordersuccess.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="order-success">
+  <div class="breadcrumb">Home › Add to Cart › Payments › Order Complete</div>
+
+  <div class="success-animation">
+    <img src="{% static 'images/ordersuccess.png' %}" alt="Success">
+  </div>
+
+  <!-- NOTE: added classes so CSS selectors match exactly -->
+  <h2 class="order-id">Order ID: OCD1232</h2>
+  <h1 class="order-title">Your Order Is Completed!</h1>
+  <p class="order-desc">
+    Thank you for your order! Your order is being processed and will be completed within 3–6 hours.
+    You will receive an email confirmation when your order is completed.
+  </p>
+   <p class="countdown-message">
+            Redirecting to home page in <span id="countdown">5</span> seconds...
+        </p>
+</section>
+<script src="{% static 'js/ordersuccess.js' %}"></script>
+{% endblock %}

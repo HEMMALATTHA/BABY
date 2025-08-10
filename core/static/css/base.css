@@ -1,0 +1,241 @@
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Navbar */
+.eb-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 10px 20px;
+    border-bottom: 1px solid #ddd;
+    flex-wrap: wrap;
+}
+
+.eb-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.eb-logo {
+    height: 80px;
+}
+
+.eb-logo-text {
+    font-weight: 600;
+    font-size: 22px;
+}
+
+.eb-nav-links {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.eb-nav-links a, .eb-dropbtn {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+      padding: 5px 5px; /* space for underline */
+    border-bottom: 1px solid transparent; /* invisible by default */
+}
+.eb-nav-links .eb-active {
+    border-bottom: 1px solid #00b4d8; /* blue underline */
+        background: linear-gradient(to bottom,white , #b0e4f4);
+
+    
+}
+.eb-nav-links :hover{
+    border-bottom: 1px solid #00b4d8; 
+    background: linear-gradient(to bottom,white , #b0e4f4);
+}
+
+/* Dropdown */
+.eb-dropdown {
+    position: relative;
+}
+
+.eb-dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.eb-dropdown-content a {
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+.eb-dropdown-content a:hover {
+    background-color: #b0e4f4;
+    color: #00b4d8;
+}
+
+.eb-dropdown:hover .eb-dropdown-content {
+    display: block;
+}
+
+/* Right Icons Section */
+.eb-right-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Search Box with Icon Inside */
+.eb-search-box {
+    position: relative;
+}
+
+.eb-search-input {
+    border: 1px solid #00b4d8;
+    border-radius: 5px;
+    padding: 5px 35px 5px 10px;
+    font-size: 14px;
+}
+
+.eb-search-btn {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    color: #00b4d8;
+    font-size: 16px;
+}
+
+/* Extra Icons */
+.eb-icon {
+    font-size: 18px;
+    color: #00b4d8;
+    cursor: pointer;
+}
+
+/* Footer */
+
+
+/* Mobile: 300–600px */
+@media (min-width: 300px) and (max-width: 600px) {
+    .eb-navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    .eb-nav-links {
+        flex-direction: column;
+        align-items: center;
+    }
+    .eb-dropdown-content {
+        position: static;
+        box-shadow: none;
+        border-radius: 0;
+        width: 100%;
+    }
+}
+
+/* Tablet: 601–768px */
+@media (min-width: 601px) and (max-width: 768px) {
+    .eb-navbar {
+        flex-wrap: wrap;
+    }
+    .eb-right-icons {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+
+.eb-footer {
+    background-color: #b0e4f4;
+    color: black;
+    padding: 30px 20px;
+    font-family: 'Poppins', sans-serif;
+    margin-top: 100px;
+}
+
+.eb-footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    
+}
+
+.eb-footer-column h4 {
+    border-bottom: 2px solid black;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.eb-footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.eb-footer-column ul li {
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.eb-footer-column a {
+    color: black;
+    text-decoration: none;
+}
+
+.eb-footer-column a:hover {
+    color: #00b4d8;
+}
+
+.eb-social-icons a {
+    margin-right: 10px;
+    font-size: 18px;
+    color: black;
+}
+
+.eb-social-icons a:hover {
+    color: #00b4d8;
+}
+
+.eb-footer-divider {
+    border: none;
+    border-top: 1px solid black;
+    margin: 20px 0;
+}
+
+.eb-footer-bottom {
+    text-align: center;
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Responsive: 300-600px */
+@media (min-width: 300px) and (max-width: 600px) {
+    .eb-footer-container {
+        flex-direction: column;
+    }
+}
+
+/* Responsive: 601-768px */
+@media (min-width: 601px) and (max-width: 768px) {
+    .eb-footer-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

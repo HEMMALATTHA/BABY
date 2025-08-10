@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Contact Us | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/contact.css' %}">
+{% endblock %}
+
+{% block content %}
+<section class="contact-section">
+    <div class="breadcrumb">Home › Contact Us</div>
+
+    <div class="contact-container">
+        <!-- Left Contact Info -->
+        <div class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Say something to start a live chat!</p>
+
+            <div class="info-item">
+                <i class="fa fa-phone"></i>
+                <span>+91 1234567890</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-envelope"></i>
+                <span>Earthbuts@gmail.com</span>
+            </div>
+
+            <div class="info-item">
+                <i class="fa fa-map-marker"></i>
+                <span>No.5, 12th Main Road, Vijaya Nagar, Velacheri, Chennai - 600 042.</span>
+            </div>
+        </div>
+
+        <!-- Right Contact Form -->
+        <div class="contact-form">
+            <form id="contactForm">
+                <div class="form-row">
+                    <input class="cntct" type="text" id="firstName" placeholder="First Name">
+                    <input class="cntct" type="text" id="lastName" placeholder="Last Name">
+                </div>
+                <div class="form-row">
+                    <input class="cntct" type="email" id="email" placeholder="Email">
+                    <input class="cntct"  type="text" id="phone" placeholder="Phone Number">
+                </div>
+
+             <div class="subject">
+    <label>Select Subject?</label>
+    <div class="radio-group">
+        <label><input class="cntct"type="radio" name="subject" value="General Inquiry" checked> General Inquiry</label>
+        <label><input class="cntct" type="radio" name="subject" value="Call Request"> Call Request</label>
+        <label><input class="cntct" type="radio" name="subject" value="Complaint"> Complaint</label>
+        <label><input class="cntct" type="radio" name="subject" value="Information"> Information</label>
+    </div>
+</div>
+
+                <textarea id="message" placeholder="Write your message.."></textarea>
+
+                <button  class=  "sendbtn"type="submit">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+
+<script src="{% static 'js/contact.js' %}"></script>
+{% endblock %}

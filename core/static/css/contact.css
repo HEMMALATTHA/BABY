@@ -1,0 +1,131 @@
+.contact-section {
+    padding: 120px;
+}
+
+.breadcrumb {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.contact-container {
+    display: flex;
+    gap: 40px;
+    height: 90vh;
+}
+
+.contact-info {
+    background: #a8d8e5;
+    padding: 30px;
+    border-radius: 8px;
+    flex: 1.5;
+}
+
+.contact-info h2 {
+    font-weight: bold;
+    margin-bottom: 20px;
+    color:#f2f2f2;
+}
+
+.contact-info p {
+    color: #f2f2f2;
+    margin-bottom: 100px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 35px;
+    color: white;
+}
+
+.contact-form {
+    flex: 2;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 75px;
+}
+
+.cntct, textarea {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border-bottom: 2px solid #00bcd4;
+    outline: none;
+}
+
+.subject {
+    margin-bottom: 55px;
+}
+.radio-group {
+    display: flex;
+    gap: 20px; /* space between each radio option */
+    align-items: center;
+    margin-top: 45px;
+}
+
+.radio-group label {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* space between radio button and text */
+    font-size: 14px;
+    white-space: nowrap;
+}
+#message{
+    margin-bottom: 30px;
+}
+.sendbtn {
+    background: #00b4d8;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 400px;
+}
+/* Existing styles... */
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    /* Stack contact info and form vertically */
+    .contact-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Make radio buttons wrap instead of overflow */
+    .radio-group {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 15px;
+    }
+
+    /* Adjust send button position */
+    .sendbtn {
+        margin-left: 0;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduce padding on small phones */
+    .contact-section {
+        padding: 40px 20px;
+    }
+
+    /* Make input fields more compact */
+    .cntct, textarea {
+        font-size: 14px;
+        padding: 6px;
+    }
+
+    /* Smaller radio text for narrow screens */
+    .radio-group label {
+        font-size: 13px;
+    }
+}

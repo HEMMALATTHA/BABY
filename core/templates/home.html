@@ -1,0 +1,422 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home | EarthBubs{% endblock %}
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+{% endblock %}
+
+{% block content %}
+<section class="home-hero">
+    <!-- The hero banner image will be set via CSS -->
+</section>
+<section class="featured-categories-section">
+    <div class="featured-categories-header">
+        <h2 class="featured-categories-heading">Featured Categories</h2>
+        <h3 class="featured-categories-subtitle">Everything Your Baby Needs</h3>
+    </div>
+    <div class="category-cards-container">
+        <a href="{% url 'pampers' %}" class="category-card-link">
+            <div class="category-card">
+                <div class="card-image">
+                    <img src="{% static 'images/diapers.png' %}" alt="Diapers & Pampers" class="product-image">
+                    <!-- <div class="card-label">
+                        <p>Soft Like Cotton</p>
+                        <p>Small Packs</p>
+                        <p>32 Pcs & Kgs</p>
+                    </div> -->
+                </div>
+                <div class="card-details">
+                    <span class="category-card-title">Diapers & Pampers</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'girls' %}" class="category-card-link">
+            <div class="category-card">
+                <div class="card-image">
+                    <img src="{% static 'images/girl2.png' %}" alt="Baby Dress" class="product-image">
+                </div>
+                <div class="card-details">
+                    <span class="category-card-title">Baby Dress</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'soap' %}" class="category-card-link">
+            <div class="category-card">
+                <div class="card-image">
+                    <img src="{% static 'images/soaphome.png' %}" alt="Baby Soap" class="product-image">
+                </div>
+                <div class="card-details">
+                    <span class="category-card-title">Baby Soap</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+        <a href="{% url 'stroller' %}" class="category-card-link">
+            <div class="category-card">
+                <div class="card-image">
+                    <img src="{% static 'images/strollhome.png' %}" alt="Baby Stroller & Prams" class="product-image">
+                </div>
+                <div class="card-details">
+                    <span class="category-card-title">Baby Stroller & Prams</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-icon">
+                        <path d="M5 12h14M12 5l7 7-7 7"/>
+                    </svg>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+
+<!-- Why Parents Trust Us Section -->
+<section class="why-trust-us-section">
+    <div class="why-trust-us-header">
+        <h2 class="why-trust-us-heading">Why Parents Trust Us</h2>
+        <h3 class="why-trust-us-subtitle">Designed with Love. Backed by Science.</h3>
+    </div>
+    <div class="trust-cards-container">
+        <div class="trust-card">
+            <div class="trust-icon">
+                <img src="{% static 'images/homee3.png' %}" alt="Dermatologist Approved Icon">
+            </div>
+            <div class="trust-card-content">
+                <h4 class="trust-card-title">Dermatologist Approved</h4>
+                <p class="trust-card-text">Every product is tested and safe for even the most sensitive baby skin.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">
+                <img src="{% static 'images/homee4.png' %}" alt="Natural & Non-Toxic Ingredients Icon">
+            </div>
+            <div class="trust-card-content">
+                <h4 class="trust-card-title">Natural & Non-Toxic Ingredients</h4>
+                <p class="trust-card-text">We use only gentle, plant-based formulas free from harsh chemicals.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">
+                <img src="{% static 'images/homee1.png' %}" alt="Loved by Thousands of Parents Icon">
+            </div>
+            <div class="trust-card-content">
+                <h4 class="trust-card-title">Loved by Thousands of Parents</h4>
+                <p class="trust-card-text">Real reviews, real results trusted by families across the country.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">
+                <img src="{% static 'images/homee2.png' %}" alt="Eco-Friendly Promise Icon">
+            </div>
+            <div class="trust-card-content">
+                <h4 class="trust-card-title">Eco-Friendly Promise</h4>
+                <p class="trust-card-text">From biodegradable packaging to cruelty-free manufacturing, we care for the planet as much as your baby.</p>
+            </div>
+        </div>
+        <div class="trust-card">
+            <div class="trust-icon">
+                <img src="{% static 'images/homee5.png' %}" alt="Fast & Reliable Shipping Icon">
+            </div>
+            <div class="trust-card-content">
+                <h4 class="trust-card-title">Fast & Reliable Shipping</h4>
+                <p class="trust-card-text">We deliver your baby's essentials swiftly and safely because every moment counts.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- New Section: Best Sellers -->
+<section class="best-sellers-section">
+    <div class="best-sellers-header">
+        <h2 class="best-sellers-heading">Best Sellers</h2>
+        <h3 class="best-sellers-subtitle">Our Most Loved Products</h3>
+    </div>
+    <div class="best-sellers-container">
+        <!-- Product Card 1 -->
+        <a href="{% url 'pampers' %}" class="product-card-link">
+            <div class="product-card">
+                <div class="product-card-image-container">
+                    <span class="product-new-badge">NEW</span>
+                    <img src="{% static 'images/wipes.png' %}" alt="wipes" class="product-card-image">
+                </div>
+                <div class="product-card-details">
+                    <h4 class="product-card-title">wipes</h4>
+                    <div class="star-rating">
+                        <!-- Star icons can go here -->
+                    </div>
+                    <div class="pricing-info">
+                        <span class="mrp">MRP ₹1444.00</span>
+                        <span class="price">Price ₹1299.00</span>
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </a>
+        <!-- Product Card 2 -->
+        <a href="{% url 'boy' %}" class="product-card-link">
+            <div class="product-card">
+                <div class="product-card-image-container">
+                    <span class="product-new-badge">NEW</span>
+                    <img src="{% static 'images/babyy.png' %}" alt="Mama Miel Baby" class="product-card-image">
+                </div>
+                <div class="product-card-details">
+                    <h4 class="product-card-title">Mama Miel Baby</h4>
+                    <div class="star-rating">
+                        <!-- Star icons can go here -->
+                    </div>
+                    <div class="pricing-info">
+                        <span class="mrp">MRP ₹1444.00</span>
+                        <span class="price">Price ₹1299.00</span>
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </a>
+        <!-- Product Card 3 -->
+        <a href="{% url 'girls' %}" class="product-card-link">
+            <div class="product-card">
+                <div class="product-card-image-container">
+                    <span class="product-new-badge">NEW</span>
+                    <img src="{% static 'images/girl5.png' %}" alt="Zibuyu" class="product-card-image">
+                </div>
+                <div class="product-card-details">
+                    <h4 class="product-card-title">Zibuyu</h4>
+                    <div class="star-rating">
+                        <!-- Star icons can go here -->
+                    </div>
+                    <div class="pricing-info">
+                        <span class="mrp">MRP ₹1444.00</span>
+                        <span class="price">Price ₹1299.00</span>
+                    </div>
+                    <button class="buy-button">Buy</button>
+                </div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- New Section: Trending Products - Stroller Feature -->
+<section class="trending-products-section">
+    <div class="trending-products-header">
+        <h2 class="trending-products-heading">Trending Products</h2>
+        <h3 class="trending-products-subtitle">Parent Favorites, Baby Approved</h3>
+    </div>
+    <div class="stroller-feature-container">
+        <div class="stroller-image-container">
+            <img src="{% static 'images/homestroll.png' %}" alt="Baby Stroller" class="stroller-image">
+        </div>
+        <div class="stroller-text-container">
+            <h2 class="stroller-title">Baby Stroller</h2>
+            <p class="stroller-description">Explore the world in comfort with our smooth and stylish baby stroller. Designed for safety, ease, and flexibility, perfect for every little adventure. Lightweight, foldable, and parent-friendly for life on the go.</p>
+            <a href="{% url 'stroller' %}" class="buy-now-button">
+                Buy Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right-icon">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+<!-- New Section: Trending Products - Feeding Bottle Feature -->
+<section class="trending-products-section">
+    
+    <div class="feeding-bottle-feature-container">
+       
+        <div class="feeding-bottle-text-container">
+            <h2 class="feeding-bottle-title">Feeding Bottle</h2>
+            <p class="feeding-bottle-description">The baby feeding bottle is made from 100% BPA-free, safe materials. Its soft silicone nipple feels natural and gentle on the baby's mouth. The anti-colic design helps reduce gas and fussiness during feeding. It's lightweight, easy to hold, and perfect for everyday use.</p>
+            <a href="{% url 'bottle' %}" class="buy-now-button">
+                Buy Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right-icon">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+         <div class="feeding-bottle-image-container">
+            <img src="{% static 'images/feedinghome.png' %}" alt="Baby Feeding Bottle" class="feeding-bottle-image">
+        </div>
+    </div>
+</section>
+
+<!-- New Section: Trending Products - Pampers Feature -->
+<section class="trending-products-section">
+   
+    <div class="pampers-feature-container">
+        <div class="pampers-image-container">
+            <img src="{% static 'images/diapers.png' %}" alt="Pampers" class="pampers-image">
+        </div>
+        <div class="pampers-text-container">
+            <h2 class="pampers-title">Pampers</h2>
+            <p class="pampers-description">Keep your baby dry, comfy, and smiling all day with our ultra-soft diapers. Designed with leak-lock technology and breathable layers for extra protection. Gentle on delicate skin, perfect for day and night comfort.</p>
+            <a href="{% url 'pampers' %}" class="buy-now-button">
+                Buy Now
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="arrow-right-icon">
+                    <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</section>
+
+
+
+      <!-- Customer Testimonials Section -->
+        <section class="testimonials-section">
+            <header class="testimonials-header">
+                <h2 class="testimonials-heading">Customer Testimonials</h2>
+                <p class="testimonials-subtitle">Parent Favorites, Baby Approved</p>
+            </header>
+            <div class="testimonials-container">
+                <button class="nav-arrow" aria-label="Previous Testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                    </svg>
+                </button>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="static/images/user1.png" alt="Rahul S.">
+                    </div>
+                    <div class="testimonial-content">
+                        <img src="https://placehold.co/24x24/FFD700/000?text=★" alt="Star" class="star-icon">
+                        <h4>Rahul S. - Bangalore, India</h4>
+                        <p>"We love the stroller – lightweight, easy to fold, and super smooth on roads. Perfect for city walks. The quality feels premium, and my daughter is always comfy in it."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="static/images/user2.png" alt="Priya M.">
+                    </div>
+                    <div class="testimonial-content">
+                        <img src="https://placehold.co/24x24/FFD700/000?text=★" alt="Star" class="star-icon">
+                        <h4>Priya M. - Chennai, India</h4>
+                        <p>"The EarthBubs diapers are amazing! My baby sleeps through the night without any leaks or rashes. I've tried many brands, but this one is truly gentle and reliable."</p>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <img src="static/images/user3.png" alt="Anika R.">
+                    </div>
+                    <div class="testimonial-content">
+                        <img src="https://placehold.co/24x24/FFD700/000?text=★" alt="Star" class="star-icon">
+                        <h4>Anika R. - Mumbai, India</h4>
+                        <p>"I ordered the baby soap kit and I'm blown away. The lotion and wash are so gentle, and the natural fragrance is lovely, no irritation at all - just soft, healthy skin."</p>
+                    </div>
+                </div>
+
+                <button class="nav-arrow" aria-label="Next Testimonial">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                    </svg>
+                </button>
+            </div>
+        </section>
+
+
+     <!-- FAQ Section -->
+        <section class="faq-section py-20 px-4 md:px-8">
+            <header class="text-center mb-12">
+                <h2 class="text-4xl md:text-5xl font-bold mb-2">Frequently Asked Questions</h2>
+                <p class="text-lg md:text-xl text-gray-600">We're Here to Help – Every Step of the Way</p>
+            </header>
+            <div class="faq-container max-w-3xl mx-auto space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>Are your products safe for newborns?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">Yes, all our products are dermatologically tested and made with gentle, non-toxic ingredients that are safe for newborns and sensitive skin.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 2 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>How long does delivery take?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">Delivery typically takes 3-5 business days. You can track your order using the link provided in your confirmation email.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>Can I return or exchange a product?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">Yes, we offer a hassle-free 30-day return and exchange policy. Please refer to our returns page for more details.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>What payment methods do you accept?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">We accept all major credit cards, debit cards, UPI, and online banking. We also offer Cash on Delivery (COD) for most locations.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 5 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>Are your skincare products organic or natural?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">Our skincare line is made with a high percentage of natural and organic ingredients, carefully selected for their purity and effectiveness. We are committed to using only the best for your baby.</p>
+                    </div>
+                </div>
+
+                <!-- FAQ Item 6 -->
+                <div class="accordion-item bg-white rounded-xl shadow-lg overflow-hidden">
+                    <button class="accordion-button w-full text-left p-6 flex justify-between items-center text-xl font-semibold text-gray-800 focus:outline-none">
+                        <span>How can I contact customer support?</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2.5" stroke="currentColor" class="w-6 h-6 text-[#00acc1]">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </button>
+                    <div class="accordion-content">
+                        <p class="pb-6 pt-0 text-gray-600">You can reach our customer support team via email at support@babybubs.com or by calling us at +91-9876543210. Our team is available from 9 AM to 6 PM IST, Monday to Saturday.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+  
+{% endblock %}
